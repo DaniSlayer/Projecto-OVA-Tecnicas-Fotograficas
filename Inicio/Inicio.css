@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: transparent;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background: black;
+}
+
+header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+}
+
+ .contenido-text {
+   grid-column: 1 / -1;
+   text-align: center;
+   padding: 20px;
+   background-color: rgba(0, 0, 0, 0.6);
+   border-radius: 10px;
+   color: #fff;
+}
+
+.grid-container {
+  background: transparent;
+  backdrop-filter: blur(25px);
+  display: grid;
+  grid-template-columns: 1fr; /* Asegura que la imagen ocupe una fila completa */
+  justify-items: center; /* Centra el contenido horizontalmente */
+  gap: 20px;
+  max-width: 990px;
+  margin: 20px auto;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+.grid-container h1 {
+  font-size: 20px;
+}
+
+.grid-container h2 {
+  font-size: 20px;
+}
+
+.grid-container > img {
+  margin-top: 25px;
+  width: 1800px; /* Se ajusta dinámicamente al tamaño del contenedor */
+  max-width: 780px; /* Define un tamaño máximo opcional */
+  height: auto; /* Mantiene la proporción */
+}
+
+.recomendado .video {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 764px) {
+  header {
+    height: 65px;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+.grid-container > img {
+  width: 350px; /* Se ajusta dinámicamente al tamaño del contenedor */
+  max-width: 780px; /* Define un tamaño máximo opcional */
+  height: auto; /* Mantiene la proporción */
+  }
+}
+
+.recomendado {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra horizontalmente el contenido */
+  margin-top: 20px; /* Añade un margen superior para separar del contenido anterior */
+}
+
+.recomendado h3 {
+  color: #fff;
+  font-size: 24px; /* Ajusta el tamaño del h3 */
+  margin-bottom: 15px; /* Añade separación del h3 con los videos */
+  text-align: center; /* Centra el texto del h3 */
+}
+
+.recomendado .videos-container {
+  display: flex; /* Coloca los iframes en una fila */
+  justify-content: center; /* Centra los iframes en la fila */
+  gap: 20px; /* Define el margen entre los iframes */
+}
+
+.recomendado .video {
+  border-radius: 10px;
+}
+
+@media (max-width: 440px) {
+  .recomendado .videos-container {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra los videos en la columna */
+    gap: 15px; /* Define el margen entre los videos */
+  }
+}
